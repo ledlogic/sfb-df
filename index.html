@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="project-source" content="https://github.com/ledlogic/sfb-df" />
+	<title>SFB - Dogfight Advantage</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="css/lib/bootstrap/3.3.7/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/lib/bootstrap/3.3.7/bootstrap-theme.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/sfb/sfb.css" />
+</head>
+<body class="no-border">
+	<h1>SFB - Dogfight Advantage</h1>
+	<div class="sfb-nav row">
+		<div class="col-md-6">
+			<label for="sfb-die-roll">Die Roll:</label>
+			<select id="sfb-die-roll" class="sfb-calc-dependency">
+				<option value="0">Select one...</option>
+				<option value="+1">1</option>
+				<option value="+2">2</option>
+				<option value="+3">3</option>
+				<option value="+4">4</option>
+				<option value="+5">5</option>
+				<option value="+6">6</option>
+			</select>
+		</div>
+	</div>
+	<div class="sfb-nav row">
+		<div class="col-md-6">
+			<label for="sfb-pilot-rating">Pilot Rating (J7.61):</label>
+			<select id="sfb-pilot-rating" class="sfb-calc-dependency">
+				<option value="0">Select one...</option>
+				<option value="+1">Ace</option>
+				<option value="0">Good</option>
+				<option value="-1">Green</option>
+			</select>
+		</div>
+	</div>
+	<div class="sfb-nav row">
+		<div class="col-md-6">
+			<label for="sfb-dog-fighting">Dog Fighting (J7.62):</label>
+			<select id="sfb-dog-fighting" class="sfb-calc-dependency">
+				<option value="0">Select one...</option>
+				<option value="0">0</option>
+				<option value="+1">1</option>
+				<option value="+2">2</option>
+				<option value="+3">3</option>
+				<option value="+4">4</option>
+			</select>
+		</div>
+	</div>
+	<div class="sfb-nav row">
+		<div class="col-md-6">
+			<label for="sfb-speed-rating">Speed Rating (J7.63):</label>
+			<select id="sfb-speed-rating" class="sfb-calc-dependency">
+				<option value="0">Select one...</option>
+				<option value="0">0</option>
+				<option value="+1">1</option>
+				<option value="+2">2</option>
+				<option value="+3">3</option>
+				<option value="+4">4</option>
+				<option value="+5">5</option>
+				<option value="+6">6</option>
+				<option value="+7">7</option>
+				<option value="+8">8</option>
+				<option value="+9">9</option>
+				<option value="+10">10</option>
+				<option value="+11">11</option>
+				<option value="+12">12</option>
+				<option value="+13">13</option>
+				<option value="+14">14</option>
+				<option value="+15">15</option>
+			</select>
+		</div>
+	</div>
+	<div class="sfb-nav row">
+		<div class="col-md-6">
+			<label for="sfb-second-shuttle">Second Shuttle? (J7.64):</label>
+			<select id="sfb-second-shuttle" class="sfb-calc-dependency">
+				<option value="0">Select one...</option>
+				<option value="+2">Yes</option>
+				<option value="0">No</option>
+			</select>
+		</div>
+	</div>
+	<div class="sfb-nav row">
+		<div class="col-md-6">
+			<label for="sfb-attempt-to-separate">Attempting to Separate? (J7.64):</label>
+			<select id="sfb-attempt-to-separate" class="sfb-calc-dependency">
+				<option value="0">Select one...</option>
+				<option value="+2">Yes</option>
+				<option value="0">No</option>
+			</select>
+		</div>
+	</div>
+	<div class="sfb-nav row">
+		<div class="col-md-6">
+			<label for="sfb-previousAdvantage">Had advantage on previous DFI? (J7.64):</label>
+			<select id="sfb-previousAdvantage" class="sfb-calc-dependency">
+				<option value="0">Select one...</option>
+				<option value="+1">Yes</option>
+				<option value="0">No</option>
+			</select>
+		</div>
+	</div>
+	<div class="sfb-nav row">
+		<div class="col-md-6">
+			<label for="sfb-damaged">Has 3+ points of damage? (J7.64):</label>
+			<select id="sfb-damaged" class="sfb-calc-dependency">
+				<option value="0">Select one...</option>
+				<option value="-1">Yes</option>
+				<option value="0">No</option>
+			</select>
+		</div>
+	</div>	
+	<div class="sfb-nav row">
+		<div class="col-md-6">
+			<label for="sfb-two-seater">Fighter is two-seater? (J7.64):</label>
+			<select id="sfb-two-seater" class="sfb-calc-dependency">
+				<option value="0">Select one...</option>
+				<option value="+1">Yes</option>
+				<option value="0">No</option>
+			</select>
+		</div>
+	</div>	
+	<div class="sfb-nav row">
+		<div class="col-md-6">
+			<label for="sfb-advantage">Advantage (J7.60):</label>
+			<div id="sfb-advantage">
+			</div>
+		</div>
+	</div>
+	
+	<h4 class="st-footer">SFB - Dogfight Advantage - <a href="https://github.com/ledlogic/sfb-df">https://github.com/ledlogic/sfb-df</a></h4>
+</body>
+<script type="text/javascript" src="js/lib/jquery/1.11.2/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/lib/bootstrap/3.3.7/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/sfb/sfb.js"></script>
+</html>
